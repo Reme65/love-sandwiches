@@ -12,6 +12,10 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('love_sandwiches')
 
+SHEET = GSPREAD_CLIENT.open_by_key(
+    "1dVLgxWr3dNa1v34pcfWqQjvlUaMSeozvDiE9NO9dDcc"
+)
+
 
 def get_sales_data():
     """
